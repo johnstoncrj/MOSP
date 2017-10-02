@@ -14,7 +14,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -47,7 +47,7 @@
   </form>
 </div>
 
-<!-- Container (About Section) -->
+
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -105,4 +105,117 @@ $(document).ready(function(){
 </script>
 
 </body>
-</html>
+</html> -->
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="bookingPage.html">BOOKING</a></li>
+          <li><a href="registrationPage.html">REGISTRATION</a></li>
+          <li><a href="courseDetails.html">COURSE DETAILS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="jumbotron text-center">
+    <h1>Company</h1> 
+    <p>We specialize in blablabla</p> 
+    <form>
+      <div class="input-group">
+        <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-danger">Subscribe</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">BOOKING</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>You have selected the following course: </p>
+      <p> Chosen course</p>
+      <p>£150</p>
+      <p> Please enter your credit card information (do not actually do that) </p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="card" name="card" placeholder="Credit Card Number" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="expiry" name="expiry" placeholder="Expiry Date" type="date" required>
+          </div>
+      <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name on Card" type="text" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Book Course</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  </footer>
+  
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+  
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+  </script>
+  
+  </body>
+  </html>
