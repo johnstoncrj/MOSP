@@ -175,3 +175,8 @@ body {
         font-size: 150px;
     }
   }
+
+  #map {
+    height: 400px;
+    width: 100%;
+   }
