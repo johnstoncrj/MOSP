@@ -22,11 +22,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">NMT</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
+        <li><a href="#news">NEWS</a></li>
         <li><a href="#services">COURSES</a></li>
         <li><a href="#portfolio">VENUES</a></li>
         <li><a href="#registration">REGISTRATION</a></li>
@@ -40,14 +41,6 @@
 
 <div class="jumbotron text-center">
   <h1>Napier Management Training</h1> 
-  <form>
-    <div class="input-group">
-      <!-- <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div> -->
-    </div>
-  </form>
 </div>
 
 <!-- Container (About Section) -->
@@ -65,16 +58,41 @@
   </div>
 </div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div id="news" class="container-fluid text-center">
+    <h2>Latest news and offers</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div style="text-align: center;"><img src="images/30-korting.jpg"></div>
+          <h4>"30% discount this month only!!!"<br><span>Book today to recieve this amazing offer</span></h4>
+        </div>
+        <div class="item">
+            <div style="text-align: center;height: 230px"><img src="images/170428135.jpg"></div>
+            <h4>"More venues and courses comming in 2018"<br><span>Check back for updates</span></h4>
+        </div>
+        <div class="item">
+            <div style="text-align: center;"><img src="images/NMTNews.jpg"></div>
+            <h4>"EVEN MORE NEWS!!!"<br><span>Look at all this news...amazing</span></h4>
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 </div>
