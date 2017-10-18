@@ -32,13 +32,16 @@
         <li><a href="#portfolio">VENUES</a></li>
         <li><a href="#registration">REGISTRATION</a></li>
         <li><a href="#pricing">PRICING</a></li>
-        <li><a href="administratorPage.html">ADMINISTRATION</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="administratorPage.html">ADMINISTRATION</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+
+
+<div class="bg"></div>
 <div class="jumbotron text-center">
   <h1>Napier Management Training</h1> 
 </div>
@@ -49,8 +52,7 @@
     <div class="col-sm-8">
       <h2>About NMT</h2><br>
       <h4>NMT offers a wide variety of commercial management courses</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <p><strong>The investment returns on quality management training are immense. Research conducted by the Gallup organisation shows that the most important factor in determining how productive people are and how long they stay is not their pay or perks or working for a great brand. It’s the relationship they have with their immediate manager.</strong></p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
@@ -99,43 +101,43 @@
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4>What we offer</h4>
+  <h2>COURSES</h2>
+  <h4>Courses we currently offer</h4>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <span class="glyphicon glyphicon-cog logo-small"></span>
+      <h4>CHANGE MANAGEMENT</h4>
+      <button><a href="courseDetails_ChangeManagement.html">View course details</a></button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>PRINCE2</h4>
+      <button><a href="courseDetails_Prince2.html">View course details</a></button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>PROGRAMME MANAGEMENT</h4>
+      <button><a href="courseDetails_ProgrammeManagement.html">View course details</a></button>
     </div>
   </div>
   <br><br>
   <div class="row slideanim">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>MANAGEMENT OF RISK</h4>
+      <button><a href="courseDetails_ManagementOfRisk.html">View course details</a></button>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>ITIL</h4>
+      <button><a href="courseDetails_ITIL.html">View course details</a></button>
     </div>
-    <div class="col-sm-4">
+    <!-- <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4 style="color:#303030;">HARD WORK</h4>
       <p>Lorem ipsum dolor sit amet..</p>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -267,6 +269,16 @@
 </footer>
 
 <script>
+var jumboHeight = $('.jumbotron').outerHeight();
+function parallax(){
+    var scrolled = $(window).scrollTop();
+    $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+}
+
+$(window).scroll(function(e){
+    parallax();
+});
+
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
